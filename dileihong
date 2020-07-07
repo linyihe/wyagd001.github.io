@@ -1,0 +1,12 @@
+SingleInstance Ignore
+SetKeyDelay, 50, 50
+;
+global ping := 250 ;
+~w::
+settimer, MyTimedLabel,% -ping
+return
+MyTimedLabel:
+GetKeyState, state, w, P ;
+if state=U
+Send d
+return
